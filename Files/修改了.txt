@@ -1,5 +1,0 @@
-ValListAST.h   ValListAST.cpp
-ExpListAST.cpp
-MyLexer.h    MyLexer.cpp
-MyParser.h   MyParser.cpp
-unitTest.cpp
