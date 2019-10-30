@@ -1,0 +1,30 @@
+﻿  MyParser.cpp
+E:\C++-workspace\MyCompiler\Parser\MyParser.h(146,22): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(17,20): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(37,13): warning C4244: “初始化”: 从“std::streamoff”转换到“int”，可能丢失数据
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(153,13): warning C4244: “初始化”: 从“std::streamoff”转换到“int”，可能丢失数据
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(159,20): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(688,24): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(697,26): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(1243,25): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(1267,21): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(1311,25): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(1338,21): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(1393,26): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(1421,22): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(1481,26): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(1508,22): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(1574,26): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(1601,22): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(1653,26): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(1680,22): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(1876,24): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(2056,32): warning C4018: “>”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(2295,25): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(2434,25): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(2573,25): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(3794,24): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(3809,26): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(4234,22): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++-workspace\MyCompiler\Parser\MyParser.cpp(4239,22): warning C4018: “<”: 有符号/无符号不匹配
+  Parser.vcxproj -> E:\C++-workspace\MyCompiler\Debug\Parser.exe
