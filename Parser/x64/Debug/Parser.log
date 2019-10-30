@@ -1,1 +1,4 @@
-﻿  Parser.vcxproj -> E:\LLVM\llvm build\x64\Debug\Parser.exe
+﻿  MyLexer.cpp
+E:\LLVM\llvm build\Horizon_Team\Parser\FromLexer\MyLexer.cpp(825,24): warning C4244: “=”: 从“std::streamoff”转换到“int”，可能丢失数据
+E:\LLVM\llvm build\Horizon_Team\Parser\FromLexer\MyLexer.cpp(868,32): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  Parser.vcxproj -> E:\LLVM\llvm build\x64\Debug\Parser.exe
