@@ -211,6 +211,8 @@ Value* ExpAST::codegen() {
 				//Val = Builder.CreateMul(LVar, RVar);
 				//Val = Builder.CreateICm
 				//Val->print(errs());
+				Val = Builder.CreateICmpSGT(LVar, RVar);
+				Val = Builder.CreateZExt(Val, IntegerType::get(TheContext, 32));
 				cout << "\n";
 				return Val;
 			}
@@ -224,6 +226,8 @@ Value* ExpAST::codegen() {
 				RVar->print(errs());
 				cout << "\n";
 			}
+			Val = Builder.CreateFCmpUGT(LVar, RVar);
+
 			break;
 		case Op::MOREOREQ:
 			break;

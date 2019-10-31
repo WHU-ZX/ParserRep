@@ -1,1 +1,747 @@
-﻿  Parser.vcxproj -> E:\LLVM\llvm build\x64\Debug\Parser.exe
+﻿  ExpAST.cpp
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\MathExtras.h(379,31): warning C4146: 一元负运算符应用于无符号类型，结果仍为无符号类型
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(44,7): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(68,1): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMapInfo.h(268,1): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\StringExtras.h(72,13): warning C4146: 一元负运算符应用于无符号类型，结果仍为无符号类型
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\StringExtras.h(79,64): warning C4146: 一元负运算符应用于无符号类型，结果仍为无符号类型
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\StringExtras.h(163,3): warning C4146: 一元负运算符应用于无符号类型，结果仍为无符号类型
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624: “llvm::detail::trivial_helper<T>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:             T=std::string
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message : 查看对正在编译的 类 模板 实例化“llvm::detail::trivial_helper<T>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :             T=std::string
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message : 查看对正在编译的 类 模板 实例化“std::is_copy_constructible<llvm::detail::trivial_helper<T>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :             T=std::string
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message : 查看对正在编译的 类 模板 实例化“llvm::is_trivially_copyable<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :             T=std::string
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message : 查看对正在编译的 类 模板 实例化“llvm::SmallVectorImpl<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :             T=std::string
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\Error.h(967): message : 查看对正在编译的 类 模板 实例化“llvm::SmallVector<std::string,2>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\APInt.h(1732,31): warning C4244: “参数”: 从“uint64_t”转换到“uint32_t”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\APInt.h(1779,20): warning C4244: “return”: 从“uint64_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\DerivedTypes.h(557,29): warning C4244: “return”: 从“uint64_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\DerivedTypes.h(567,48): warning C4244: “return”: 从“uint64_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\User.h(48,32): warning C4141: “inline”: 使用了多次
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\GlobalObject.h(63,12): warning C4244: “return”: 从“uint64_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624: “llvm::detail::trivial_helper<T>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:             T=std::unique_ptr<llvm::Module,std::default_delete<llvm::Module>>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message : 查看对正在编译的 类 模板 实例化“llvm::detail::trivial_helper<T>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :             T=std::unique_ptr<llvm::Module,std::default_delete<llvm::Module>>
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message : 查看对正在编译的 类 模板 实例化“std::is_copy_constructible<llvm::detail::trivial_helper<T>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :             T=std::unique_ptr<llvm::Module,std::default_delete<llvm::Module>>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message : 查看对正在编译的 类 模板 实例化“llvm::is_trivially_copyable<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :             T=std::unique_ptr<llvm::Module,std::default_delete<llvm::Module>>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message : 查看对正在编译的 类 模板 实例化“llvm::SmallVectorImpl<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :             T=std::unique_ptr<llvm::Module,std::default_delete<llvm::Module>>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\ExecutionEngine.h(134): message : 查看对正在编译的 类 模板 实例化“llvm::SmallVector<std::unique_ptr<llvm::Module,std::default_delete<_Ty>>,1>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\ExecutionEngine.h(134): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\ExecutionEngine.h(134): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\ExecutionEngine.h(134): message :             _Ty=llvm::Module
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\ExecutionEngine.h(134): message :         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\chrono(669): message : 查看对正在编译的 类 模板 实例化“std::chrono::duration<double,std::ratio<1,1>>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\chrono(177): message : 查看对正在编译的 类 模板 实例化“std::chrono::duration<__int64,std::nano>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\chrono(647): message : 查看对正在编译的 类 模板 实例化“std::chrono::time_point<std::chrono::steady_clock,std::chrono::steady_clock::duration>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\MC\SubtargetFeature.h(60,1): warning C4146: 一元负运算符应用于无符号类型，结果仍为无符号类型
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\MC\SubtargetFeature.h(106,1): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\MC\SubtargetFeature.h(118,1): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\MC\SubtargetFeature.h(130,1): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\MC\SubtargetFeature.h(155,1): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(80,1): warning C4624: “llvm::detail::copy_construction_triviality_helper<T>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(80,1): warning C4624:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(80,1): warning C4624:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(80,1): warning C4624:             T=llvm::Expected<llvm::orc::SymbolMap>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(80,1): warning C4624:         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message : 查看对正在编译的 类 模板 实例化“llvm::detail::copy_construction_triviality_helper<T>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :             T=llvm::Expected<llvm::orc::SymbolMap>
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(101): message : 查看对正在编译的 类 模板 实例化“std::is_copy_constructible<llvm::detail::copy_construction_triviality_helper<T>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(101): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(101): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(101): message :             T=llvm::Expected<llvm::orc::SymbolMap>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(101): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\FunctionExtras.h(75): message : 查看对正在编译的 类 模板 实例化“llvm::is_trivially_copy_constructible<llvm::Expected<llvm::orc::SymbolMap>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\FunctionExtras.h(75): message : 查看对正在编译的 别名 模板 实例化“llvm::unique_function<void (llvm::Expected<llvm::orc::SymbolMap>)>::AdjustedParamT<llvm::Expected<llvm::orc::SymbolMap>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\Orc\Core.h(482): message : 查看对正在编译的 类 模板 实例化“llvm::unique_function<void (llvm::Expected<llvm::orc::SymbolMap>)>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(87,1): warning C4624: “llvm::detail::move_construction_triviality_helper<T>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(87,1): warning C4624:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(87,1): warning C4624:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(87,1): warning C4624:             T=llvm::Expected<llvm::orc::SymbolMap>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(87,1): warning C4624:         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(652): message : 查看对正在编译的 类 模板 实例化“llvm::detail::move_construction_triviality_helper<T>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(652): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(652): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(652): message :             T=llvm::Expected<llvm::orc::SymbolMap>
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(652): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(112): message : 查看对正在编译的 类 模板 实例化“std::is_move_constructible<llvm::detail::move_construction_triviality_helper<T>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(112): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(112): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(112): message :             T=llvm::Expected<llvm::orc::SymbolMap>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(112): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\FunctionExtras.h(75): message : 查看对正在编译的 类 模板 实例化“llvm::is_trivially_move_constructible<llvm::Expected<llvm::orc::SymbolMap>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Object\ObjectFile.h(571,1): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624: “llvm::detail::trivial_helper<T>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:             T=llvm::DILineInfo
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message : 查看对正在编译的 类 模板 实例化“llvm::detail::trivial_helper<T>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :             T=llvm::DILineInfo
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message : 查看对正在编译的 类 模板 实例化“std::is_copy_constructible<llvm::detail::trivial_helper<T>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :             T=llvm::DILineInfo
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message : 查看对正在编译的 类 模板 实例化“llvm::is_trivially_copyable<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :             T=llvm::DILineInfo
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message : 查看对正在编译的 类 模板 实例化“llvm::SmallVectorImpl<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :             T=llvm::DILineInfo
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\DebugInfo\DIContext.h(82): message : 查看对正在编译的 类 模板 实例化“llvm::SmallVector<llvm::DILineInfo,4>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\DebugInfo\DIContext.h(98,1): warning C4267: “return”: 从“size_t”转换到“uint32_t”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\DebugInfo\DIContext.h(173,35): warning C4146: 一元负运算符应用于无符号类型，结果仍为无符号类型
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\DebugInfo\DIContext.h(174,36): warning C4146: 一元负运算符应用于无符号类型，结果仍为无符号类型
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\DebugInfo\DIContext.h(196,1): warning C4146: 一元负运算符应用于无符号类型，结果仍为无符号类型
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\DebugInfo\DIContext.h(198,1): warning C4146: 一元负运算符应用于无符号类型，结果仍为无符号类型
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\InstrTypes.h(978,48): warning C4244: “参数”: 从“uint64_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\InstrTypes.h(1180,25): warning C4244: “return”: 从“__int64”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\InstrTypes.h(1202,14): warning C4244: “return”: 从“__int64”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\InstrTypes.h(1229,48): warning C4244: “return”: 从“__int64”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\InstrTypes.h(1729,25): warning C4244: “return”: 从“__int64”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\InstrTypes.h(1757,53): warning C4244: “参数”: 从“__int64”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624: “llvm::detail::trivial_helper<T>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:             T=llvm::OperandBundleDef
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message : 查看对正在编译的 类 模板 实例化“llvm::detail::trivial_helper<T>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :             T=llvm::OperandBundleDef
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message : 查看对正在编译的 类 模板 实例化“std::is_copy_constructible<llvm::detail::trivial_helper<T>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :             T=llvm::OperandBundleDef
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message : 查看对正在编译的 类 模板 实例化“llvm::is_trivially_copyable<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :             T=llvm::OperandBundleDef
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\InstrTypes.h(1845): message : 查看对正在编译的 类 模板 实例化“llvm::SmallVectorImpl<llvm::OperandBundleDef>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\InstrTypes.h(2091,1): warning C4267: “+=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(114,23): warning C4244: “return”: 从“uint64_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(245,23): warning C4244: “return”: 从“uint64_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(373,23): warning C4244: “return”: 从“uint64_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(1453,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(1462,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(1463,1): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(1463,1): warning C4267: “初始化”: 从“size_t”转换到“const unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(1476,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(1484,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(1485,1): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(1485,1): warning C4267: “初始化”: 从“size_t”转换到“const unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3232,24): warning C4244: “参数”: 从“ptrdiff_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624: “llvm::detail::trivial_helper<T>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:             T=llvm::SmallVector<unsigned int,8>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message : 查看对正在编译的 类 模板 实例化“llvm::detail::trivial_helper<T>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :             T=llvm::SmallVector<unsigned int,8>
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message : 查看对正在编译的 类 模板 实例化“std::is_copy_constructible<llvm::detail::trivial_helper<T>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :             T=llvm::SmallVector<unsigned int,8>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message : 查看对正在编译的 类 模板 实例化“llvm::is_trivially_copyable<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :             T=llvm::SmallVector<unsigned int,8>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3469): message : 查看对正在编译的 类 模板 实例化“llvm::Optional<llvm::SmallVector<unsigned int,8>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3706,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3718,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3719,1): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3729,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3740,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3741,1): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3967,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3981,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3982,1): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3994,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(4007,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(4008,1): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(4412,1): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(4419,1): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(4453,1): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(4460,1): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\IntrinsicInst.h(505,54): warning C4244: “return”: 从“uint64_t”转换到“uint32_t”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(115,1): warning C4624: “llvm::OverflowingBinaryOperator”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(156,1): warning C4624: “llvm::PossiblyExactOperator”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(398,1): warning C4624: “llvm::FPMathOperator”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(414,1): warning C4624: “llvm::ConcreteOperator<llvm::OverflowingBinaryOperator,13>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(417): message : 查看对正在编译的 类 模板 实例化“llvm::ConcreteOperator<llvm::OverflowingBinaryOperator,13>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(418,1): warning C4624: “llvm::AddOperator”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(414,1): warning C4624: “llvm::ConcreteOperator<llvm::OverflowingBinaryOperator,15>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(420): message : 查看对正在编译的 类 模板 实例化“llvm::ConcreteOperator<llvm::OverflowingBinaryOperator,15>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(421,1): warning C4624: “llvm::SubOperator”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(414,1): warning C4624: “llvm::ConcreteOperator<llvm::OverflowingBinaryOperator,17>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(423): message : 查看对正在编译的 类 模板 实例化“llvm::ConcreteOperator<llvm::OverflowingBinaryOperator,17>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(424,1): warning C4624: “llvm::MulOperator”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(414,1): warning C4624: “llvm::ConcreteOperator<llvm::OverflowingBinaryOperator,25>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(426): message : 查看对正在编译的 类 模板 实例化“llvm::ConcreteOperator<llvm::OverflowingBinaryOperator,25>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(427,1): warning C4624: “llvm::ShlOperator”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(414,1): warning C4624: “llvm::ConcreteOperator<llvm::PossiblyExactOperator,20>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(430): message : 查看对正在编译的 类 模板 实例化“llvm::ConcreteOperator<llvm::PossiblyExactOperator,20>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(431,1): warning C4624: “llvm::SDivOperator”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(414,1): warning C4624: “llvm::ConcreteOperator<llvm::PossiblyExactOperator,19>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(433): message : 查看对正在编译的 类 模板 实例化“llvm::ConcreteOperator<llvm::PossiblyExactOperator,19>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(434,1): warning C4624: “llvm::UDivOperator”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(414,1): warning C4624: “llvm::ConcreteOperator<llvm::PossiblyExactOperator,27>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(436): message : 查看对正在编译的 类 模板 实例化“llvm::ConcreteOperator<llvm::PossiblyExactOperator,27>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(437,1): warning C4624: “llvm::AShrOperator”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(414,1): warning C4624: “llvm::ConcreteOperator<llvm::PossiblyExactOperator,26>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(439): message : 查看对正在编译的 类 模板 实例化“llvm::ConcreteOperator<llvm::PossiblyExactOperator,26>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(440,1): warning C4624: “llvm::LShrOperator”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(414,1): warning C4624: “llvm::ConcreteOperator<llvm::Operator,39>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(442): message : 查看对正在编译的 类 模板 实例化“llvm::ConcreteOperator<llvm::Operator,39>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(442,76): warning C4624: “llvm::ZExtOperator”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(414,1): warning C4624: “llvm::ConcreteOperator<llvm::Operator,34>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(445): message : 查看对正在编译的 类 模板 实例化“llvm::ConcreteOperator<llvm::Operator,34>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(547,1): warning C4624: “llvm::GEPOperator”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(533,20): warning C4244: “return”: 从“std::_Iterator_traits_pointer_base<_Ty,true>::difference_type”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(533,20): warning C4244:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(533,20): warning C4244:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(533,20): warning C4244:             _Ty=const llvm::Use
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(533,20): warning C4244:         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(414,1): warning C4624: “llvm::ConcreteOperator<llvm::Operator,47>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(550): message : 查看对正在编译的 类 模板 实例化“llvm::ConcreteOperator<llvm::Operator,47>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(575,1): warning C4624: “llvm::PtrToIntOperator”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(414,1): warning C4624: “llvm::ConcreteOperator<llvm::Operator,49>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(578): message : 查看对正在编译的 类 模板 实例化“llvm::ConcreteOperator<llvm::Operator,49>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Operator.h(590,1): warning C4624: “llvm::BitCastOperator”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(80,1): warning C4624: “llvm::detail::copy_construction_triviality_helper<T>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(80,1): warning C4624:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(80,1): warning C4624:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(80,1): warning C4624:             T=llvm::Any
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(80,1): warning C4624:         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message : 查看对正在编译的 类 模板 实例化“llvm::detail::copy_construction_triviality_helper<T>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :             T=llvm::Any
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(101): message : 查看对正在编译的 类 模板 实例化“std::is_copy_constructible<llvm::detail::copy_construction_triviality_helper<T>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(101): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(101): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(101): message :             T=llvm::Any
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(101): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\FunctionExtras.h(75): message : 查看对正在编译的 类 模板 实例化“llvm::is_trivially_copy_constructible<llvm::Any>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\FunctionExtras.h(75): message : 查看对正在编译的 别名 模板 实例化“llvm::unique_function<llvm::PassInstrumentationCallbacks::BeforePassFunc>::AdjustedParamT<llvm::Any>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(91): message : 查看对正在编译的 类 模板 实例化“llvm::unique_function<llvm::PassInstrumentationCallbacks::BeforePassFunc>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message : 查看对正在编译的 类 模板 实例化“llvm::detail::trivial_helper<T>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :             T=llvm::unique_function<llvm::PassInstrumentationCallbacks::BeforePassFunc>
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message : 查看对正在编译的 类 模板 实例化“std::is_copy_constructible<llvm::detail::trivial_helper<T>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :             T=llvm::unique_function<llvm::PassInstrumentationCallbacks::BeforePassFunc>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message : 查看对正在编译的 类 模板 实例化“llvm::is_trivially_copyable<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :             T=llvm::unique_function<llvm::PassInstrumentationCallbacks::BeforePassFunc>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message : 查看对正在编译的 类 模板 实例化“llvm::SmallVectorImpl<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :             T=llvm::unique_function<llvm::PassInstrumentationCallbacks::BeforePassFunc>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\PassInstrumentation.h(117): message : 查看对正在编译的 类 模板 实例化“llvm::SmallVector<llvm::unique_function<llvm::PassInstrumentationCallbacks::BeforePassFunc>,4>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(87,1): warning C4624: “llvm::detail::move_construction_triviality_helper<T>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(87,1): warning C4624:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(87,1): warning C4624:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(87,1): warning C4624:             T=llvm::Any
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(87,1): warning C4624:         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(652): message : 查看对正在编译的 类 模板 实例化“llvm::detail::move_construction_triviality_helper<T>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(652): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(652): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(652): message :             T=llvm::Any
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(652): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(112): message : 查看对正在编译的 类 模板 实例化“std::is_move_constructible<llvm::detail::move_construction_triviality_helper<T>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(112): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(112): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(112): message :             T=llvm::Any
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(112): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\FunctionExtras.h(75): message : 查看对正在编译的 类 模板 实例化“llvm::is_trivially_move_constructible<llvm::Any>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624: “llvm::detail::trivial_helper<T>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:             T=llvm::unique_function<llvm::PassInstrumentationCallbacks::BeforePassFunc>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624: “llvm::detail::trivial_helper<T>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:             T=llvm::unique_function<llvm::PassInstrumentationCallbacks::AfterPassFunc>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message : 查看对正在编译的 类 模板 实例化“llvm::detail::trivial_helper<T>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :             T=llvm::unique_function<llvm::PassInstrumentationCallbacks::AfterPassFunc>
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message : 查看对正在编译的 类 模板 实例化“std::is_copy_constructible<llvm::detail::trivial_helper<T>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :             T=llvm::unique_function<llvm::PassInstrumentationCallbacks::AfterPassFunc>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message : 查看对正在编译的 类 模板 实例化“llvm::is_trivially_copyable<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :             T=llvm::unique_function<llvm::PassInstrumentationCallbacks::AfterPassFunc>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message : 查看对正在编译的 类 模板 实例化“llvm::SmallVectorImpl<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :             T=llvm::unique_function<llvm::PassInstrumentationCallbacks::AfterPassFunc>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\PassInstrumentation.h(118): message : 查看对正在编译的 类 模板 实例化“llvm::SmallVector<llvm::unique_function<llvm::PassInstrumentationCallbacks::AfterPassFunc>,4>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624: “llvm::detail::trivial_helper<T>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:             T=llvm::unique_function<llvm::PassInstrumentationCallbacks::AfterPassInvalidatedFunc>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message : 查看对正在编译的 类 模板 实例化“llvm::detail::trivial_helper<T>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :             T=llvm::unique_function<llvm::PassInstrumentationCallbacks::AfterPassInvalidatedFunc>
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message : 查看对正在编译的 类 模板 实例化“std::is_copy_constructible<llvm::detail::trivial_helper<T>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :             T=llvm::unique_function<llvm::PassInstrumentationCallbacks::AfterPassInvalidatedFunc>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message : 查看对正在编译的 类 模板 实例化“llvm::is_trivially_copyable<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :             T=llvm::unique_function<llvm::PassInstrumentationCallbacks::AfterPassInvalidatedFunc>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message : 查看对正在编译的 类 模板 实例化“llvm::SmallVectorImpl<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :             T=llvm::unique_function<llvm::PassInstrumentationCallbacks::AfterPassInvalidatedFunc>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\PassInstrumentation.h(120): message : 查看对正在编译的 类 模板 实例化“llvm::SmallVector<llvm::unique_function<llvm::PassInstrumentationCallbacks::AfterPassInvalidatedFunc>,4>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(58,1): warning C4267: “参数”: 从“size_t”转换到“llvm::DenseMapBase<llvm::DenseMap<llvm::Instruction *,unsigned int,llvm::DenseMapInfo<KeyT>,llvm::detail::DenseMapPair<KeyT,ValueT>>,KeyT,ValueT,KeyInfoT,BucketT>::size_type”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(58,1): warning C4267:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(58,1): warning C4267:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(58,1): warning C4267:             KeyT=llvm::Instruction *,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(58,1): warning C4267:             ValueT=unsigned int,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(58,1): warning C4267:             KeyInfoT=llvm::DenseMapInfo<llvm::Instruction *>,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(58,1): warning C4267:             BucketT=llvm::detail::DenseMapPair<llvm::Instruction *,unsigned int>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(58,1): warning C4267:         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\CallSite.h(815,1): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624: “llvm::detail::trivial_helper<T>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:             T=llvm::TargetLibraryInfoImpl
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message : 查看对正在编译的 类 模板 实例化“llvm::detail::trivial_helper<T>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :             T=llvm::TargetLibraryInfoImpl
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message : 查看对正在编译的 类 模板 实例化“std::is_copy_constructible<llvm::detail::trivial_helper<T>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :             T=llvm::TargetLibraryInfoImpl
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message : 查看对正在编译的 类 模板 实例化“llvm::is_trivially_copyable<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :             T=llvm::TargetLibraryInfoImpl
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Analysis\TargetLibraryInfo.h(369): message : 查看对正在编译的 类 模板 实例化“llvm::Optional<llvm::TargetLibraryInfoImpl>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\CFG.h(122,23): warning C4244: “return”: 从“__int64”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Dominators.h(117,1): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\PredIteratorCache.h(50,1): warning C4267: “=”: 从“size_t”转换到“ValueT”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\PredIteratorCache.h(50,1): warning C4267:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\PredIteratorCache.h(50,1): warning C4267:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\PredIteratorCache.h(50,1): warning C4267:             ValueT=unsigned int
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\PredIteratorCache.h(50,1): warning C4267:         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\PredIteratorCache.h(61,51): warning C4244: “=”: 从“__int64”转换到“ValueT”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\PredIteratorCache.h(61,51): warning C4244:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\PredIteratorCache.h(61,51): warning C4244:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\PredIteratorCache.h(61,51): warning C4244:             ValueT=unsigned int
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\PredIteratorCache.h(61,51): warning C4244:         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624: “llvm::detail::trivial_helper<T>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:             T=llvm::MemoryDependenceResults
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message : 查看对正在编译的 类 模板 实例化“llvm::detail::trivial_helper<T>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :             T=llvm::MemoryDependenceResults
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message : 查看对正在编译的 类 模板 实例化“std::is_copy_constructible<llvm::detail::trivial_helper<T>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :             T=llvm::MemoryDependenceResults
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message : 查看对正在编译的 类 模板 实例化“llvm::is_trivially_copyable<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :             T=llvm::MemoryDependenceResults
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Analysis\MemoryDependenceAnalysis.h(531): message : 查看对正在编译的 类 模板 实例化“llvm::Optional<llvm::MemoryDependenceResults>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624: “llvm::detail::trivial_helper<T>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:             T=llvm::ValueMap<KeyT,ValueT,Config>::MDMapT
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message : 查看对正在编译的 类 模板 实例化“llvm::detail::trivial_helper<T>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :             T=llvm::ValueMap<KeyT,ValueT,Config>::MDMapT
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message : 查看对正在编译的 类 模板 实例化“std::is_copy_constructible<llvm::detail::trivial_helper<T>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :             T=llvm::ValueMap<KeyT,ValueT,Config>::MDMapT
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message : 查看对正在编译的 类 模板 实例化“llvm::is_trivially_copyable<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :             T=llvm::ValueMap<KeyT,ValueT,Config>::MDMapT
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\ValueMap.h(94): message : 查看对正在编译的 类 模板 实例化“llvm::Optional<llvm::ValueMap<KeyT,ValueT,Config>::MDMapT>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\ValueMap.h(236): message : 查看对正在编译的 类 模板 实例化“llvm::ValueMap<KeyT,ValueT,Config>”的引用
+E:\llvm-zip-build\ParserRep\Parser\ExpAST.cpp(90,14): warning C4101: “LVarV”: 未引用的局部变量
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\CallSite.h(215,14): warning C4244: “return”: 从“__int64”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\CallSite.h(212): message : 在编译 类 模板 成员函数“unsigned int llvm::CallSiteBase<llvm::Function,llvm::BasicBlock,llvm::Value,llvm::User,llvm::Use,llvm::Instruction,llvm::CallInst,llvm::InvokeInst,llvm::CallBrInst,llvm::User::op_iterator>::getArgumentNo(const llvm::Use *) const”时
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\CallSite.h(807): message : 查看对正在编译的函数 模板 实例化“unsigned int llvm::CallSiteBase<llvm::Function,llvm::BasicBlock,llvm::Value,llvm::User,llvm::Use,llvm::Instruction,llvm::CallInst,llvm::InvokeInst,llvm::CallBrInst,llvm::User::op_iterator>::getArgumentNo(const llvm::Use *) const”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\CallSite.h(674): message : 查看对正在编译的 类 模板 实例化“llvm::CallSiteBase<llvm::Function,llvm::BasicBlock,llvm::Value,llvm::User,llvm::Use,llvm::Instruction,llvm::CallInst,llvm::InvokeInst,llvm::CallBrInst,llvm::User::op_iterator>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3190,64): warning C4244: “参数”: 从“ptrdiff_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3187): message : 在编译 类 模板 成员函数“ConstantIntT *llvm::SwitchInst::CaseHandleImpl<const llvm::SwitchInst,ConstantIntT,const llvm::BasicBlock>::getCaseValue(void) const”时
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3187): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3187): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3187): message :             ConstantIntT=const llvm::ConstantInt
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3187): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3403): message : 查看对正在编译的函数 模板 实例化“ConstantIntT *llvm::SwitchInst::CaseHandleImpl<const llvm::SwitchInst,ConstantIntT,const llvm::BasicBlock>::getCaseValue(void) const”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3403): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3403): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3403): message :             ConstantIntT=const llvm::ConstantInt
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3403): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3246): message : 查看对正在编译的 类 模板 实例化“llvm::SwitchInst::CaseHandleImpl<const llvm::SwitchInst,const llvm::ConstantInt,const llvm::BasicBlock>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3463): message : 查看对正在编译的 类 模板 实例化“llvm::SwitchInst::CaseIteratorImpl<llvm::SwitchInst::ConstCaseHandle>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3209,30): warning C4244: “return”: 从“ptrdiff_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3205): message : 在编译 类 模板 成员函数“unsigned int llvm::SwitchInst::CaseHandleImpl<llvm::SwitchInst,llvm::ConstantInt,llvm::BasicBlock>::getSuccessorIndex(void) const”时
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3237): message : 查看对正在编译的函数 模板 实例化“unsigned int llvm::SwitchInst::CaseHandleImpl<llvm::SwitchInst,llvm::ConstantInt,llvm::BasicBlock>::getSuccessorIndex(void) const”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Instructions.h(3222): message : 查看对正在编译的 类 模板 实例化“llvm::SwitchInst::CaseHandleImpl<llvm::SwitchInst,llvm::ConstantInt,llvm::BasicBlock>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624: “llvm::detail::trivial_helper<T>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:             T=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<llvm::DomTreeNodeBase<llvm::BasicBlock> *>>>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message : 查看对正在编译的 类 模板 实例化“llvm::detail::trivial_helper<T>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :             T=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<llvm::DomTreeNodeBase<llvm::BasicBlock> *>>>
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message : 查看对正在编译的 类 模板 实例化“std::is_copy_constructible<llvm::detail::trivial_helper<T>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :             T=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<llvm::DomTreeNodeBase<llvm::BasicBlock> *>>>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message : 查看对正在编译的 类 模板 实例化“llvm::is_trivially_copyable<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :             T=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<llvm::DomTreeNodeBase<llvm::BasicBlock> *>>>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\utility(240): message : 查看对正在编译的 类 模板 实例化“llvm::Optional<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\utility(240): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\utility(240): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\utility(240): message :             _Ty=llvm::DomTreeNodeBase<llvm::BasicBlock> *
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\utility(240): message :         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\vector(1652): message : 查看对正在编译的 类 模板 实例化“std::pair<llvm::DomTreeNodeBase<llvm::BasicBlock> *,llvm::Optional<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>>>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\vector(1652): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\vector(1652): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\vector(1652): message :             _Ty=llvm::DomTreeNodeBase<llvm::BasicBlock> *
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\vector(1652): message :         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\vector(1642): message : 在编译 类 模板 成员函数“void std::vector<std::pair<llvm::DomTreeNodeBase<llvm::BasicBlock> *,llvm::Optional<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>>>,std::allocator<std::pair<llvm::DomTreeNodeBase<llvm::BasicBlock> *,llvm::Optional<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>>>>>::_Tidy(void) noexcept”时
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\vector(1642): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\vector(1642): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\vector(1642): message :             _Ty=llvm::DomTreeNodeBase<llvm::BasicBlock> *
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\vector(1642): message :         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\vector(624): message : 查看对正在编译的函数 模板 实例化“void std::vector<std::pair<llvm::DomTreeNodeBase<llvm::BasicBlock> *,llvm::Optional<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>>>,std::allocator<std::pair<llvm::DomTreeNodeBase<llvm::BasicBlock> *,llvm::Optional<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>>>>>::_Tidy(void) noexcept”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\vector(624): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\vector(624): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\vector(624): message :             _Ty=llvm::DomTreeNodeBase<llvm::BasicBlock> *
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\vector(624): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DepthFirstIterator.h(98): message : 查看对正在编译的 类 模板 实例化“std::vector<std::pair<llvm::DomTreeNodeBase<llvm::BasicBlock> *,llvm::Optional<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>>>,std::allocator<std::pair<llvm::DomTreeNodeBase<llvm::BasicBlock> *,llvm::Optional<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>>>>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DepthFirstIterator.h(98): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DepthFirstIterator.h(98): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DepthFirstIterator.h(98): message :             _Ty=llvm::DomTreeNodeBase<llvm::BasicBlock> *
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DepthFirstIterator.h(98): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Dominators.h(220): message : 查看对正在编译的 类 模板 实例化“llvm::df_iterator<Node *,llvm::df_iterator_default_set<Node *,8>,false,llvm::GraphTraits<llvm::DomTreeNode*>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Dominators.h(220): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Dominators.h(220): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Dominators.h(220): message :             Node=llvm::DomTreeNode
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Dominators.h(220): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(362,24): warning C4244: “return”: 从“uint64_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(356): message : 在编译 类 模板 成员函数“unsigned int llvm::DenseMapBase<llvm::DenseMap<llvm::Instruction *,unsigned int,llvm::DenseMapInfo<KeyT>,llvm::detail::DenseMapPair<KeyT,ValueT>>,KeyT,ValueT,KeyInfoT,BucketT>::getMinBucketToReserveForEntries(unsigned int)”时
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(356): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(356): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(356): message :             KeyT=llvm::Instruction *,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(356): message :             ValueT=unsigned int,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(356): message :             KeyInfoT=llvm::DenseMapInfo<llvm::Instruction *>,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(356): message :             BucketT=llvm::detail::DenseMapPair<llvm::Instruction *,unsigned int>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(356): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(104): message : 查看对正在编译的函数 模板 实例化“unsigned int llvm::DenseMapBase<llvm::DenseMap<llvm::Instruction *,unsigned int,llvm::DenseMapInfo<KeyT>,llvm::detail::DenseMapPair<KeyT,ValueT>>,KeyT,ValueT,KeyInfoT,BucketT>::getMinBucketToReserveForEntries(unsigned int)”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(104): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(104): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(104): message :             KeyT=llvm::Instruction *,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(104): message :             ValueT=unsigned int,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(104): message :             KeyInfoT=llvm::DenseMapInfo<llvm::Instruction *>,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(104): message :             BucketT=llvm::detail::DenseMapPair<llvm::Instruction *,unsigned int>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(104): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(685): message : 查看对正在编译的 类 模板 实例化“llvm::DenseMapBase<llvm::DenseMap<llvm::Instruction *,unsigned int,llvm::DenseMapInfo<KeyT>,llvm::detail::DenseMapPair<KeyT,ValueT>>,KeyT,ValueT,KeyInfoT,BucketT>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(685): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(685): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(685): message :             KeyT=llvm::Instruction *,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(685): message :             ValueT=unsigned int,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(685): message :             KeyInfoT=llvm::DenseMapInfo<llvm::Instruction *>,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(685): message :             BucketT=llvm::detail::DenseMapPair<llvm::Instruction *,unsigned int>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(685): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(28): message : 查看对正在编译的 类 模板 实例化“llvm::DenseMap<llvm::Instruction *,unsigned int,llvm::DenseMapInfo<KeyT>,llvm::detail::DenseMapPair<KeyT,ValueT>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(28): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(28): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(28): message :             KeyT=llvm::Instruction *,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(28): message :             ValueT=unsigned int
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(28): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\Allocator.h(415,40): warning C4244: “参数”: 从“__int64”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\Allocator.h(412): message : 在编译 类 模板 成员函数“void llvm::BumpPtrAllocatorImpl<llvm::MallocAllocator,4096,4096>::DeallocateSlabs(void **,void **)”时
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\Allocator.h(208): message : 查看对正在编译的函数 模板 实例化“void llvm::BumpPtrAllocatorImpl<llvm::MallocAllocator,4096,4096>::DeallocateSlabs(void **,void **)”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\Allocator.h(442): message : 查看对正在编译的 类 模板 实例化“llvm::BumpPtrAllocatorImpl<llvm::MallocAllocator,4096,4096>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\Allocator.h(491): message : 查看对正在编译的 类 模板 实例化“llvm::SpecificBumpPtrAllocator<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624: “llvm::detail::trivial_helper<T>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:             T=std::unique_ptr<llvm::DomTreeNodeBase<llvm::BasicBlock>,std::default_delete<llvm::DomTreeNodeBase<llvm::BasicBlock>>>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(92,1): warning C4624:         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message : 查看对正在编译的 类 模板 实例化“llvm::detail::trivial_helper<T>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :             T=std::unique_ptr<llvm::DomTreeNodeBase<llvm::BasicBlock>,std::default_delete<llvm::DomTreeNodeBase<llvm::BasicBlock>>>
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(621): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message : 查看对正在编译的 类 模板 实例化“std::is_copy_constructible<llvm::detail::trivial_helper<T>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :             T=std::unique_ptr<llvm::DomTreeNodeBase<llvm::BasicBlock>,std::default_delete<llvm::DomTreeNodeBase<llvm::BasicBlock>>>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(145): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(123): message : 查看对正在编译的 类 模板 实例化“llvm::is_trivially_copyable<ValueT>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(123): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(123): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(123): message :             ValueT=std::unique_ptr<llvm::DomTreeNodeBase<llvm::BasicBlock>,std::default_delete<llvm::DomTreeNodeBase<llvm::BasicBlock>>>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(123): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(110): message : 在编译 类 模板 成员函数“void llvm::DenseMapBase<llvm::DenseMap<NodeT *,std::unique_ptr<llvm::DomTreeNodeBase<NodeT>,std::default_delete<_Ty>>,llvm::DenseMapInfo<KeyT>,llvm::detail::DenseMapPair<KeyT,ValueT>>,KeyT,ValueT,KeyInfoT,BucketT>::clear(void)”时
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(110): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(110): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(110): message :             NodeT=llvm::BasicBlock,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(110): message :             _Ty=llvm::DomTreeNodeBase<llvm::BasicBlock>,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(110): message :             KeyT=llvm::BasicBlock *,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(110): message :             ValueT=std::unique_ptr<llvm::DomTreeNodeBase<llvm::BasicBlock>,std::default_delete<llvm::DomTreeNodeBase<llvm::BasicBlock>>>,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(110): message :             KeyInfoT=llvm::DenseMapInfo<llvm::BasicBlock *>,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(110): message :             BucketT=llvm::detail::DenseMapPair<llvm::BasicBlock *,std::unique_ptr<llvm::DomTreeNodeBase<llvm::BasicBlock>,std::default_delete<llvm::DomTreeNodeBase<llvm::BasicBlock>>>>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(110): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\GenericDomTree.h(761): message : 查看对正在编译的函数 模板 实例化“void llvm::DenseMapBase<llvm::DenseMap<NodeT *,std::unique_ptr<llvm::DomTreeNodeBase<NodeT>,std::default_delete<_Ty>>,llvm::DenseMapInfo<KeyT>,llvm::detail::DenseMapPair<KeyT,ValueT>>,KeyT,ValueT,KeyInfoT,BucketT>::clear(void)”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\GenericDomTree.h(761): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\GenericDomTree.h(761): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\GenericDomTree.h(761): message :             NodeT=llvm::BasicBlock,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\GenericDomTree.h(761): message :             _Ty=llvm::DomTreeNodeBase<llvm::BasicBlock>,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\GenericDomTree.h(761): message :             KeyT=llvm::BasicBlock *,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\GenericDomTree.h(761): message :             ValueT=std::unique_ptr<llvm::DomTreeNodeBase<llvm::BasicBlock>,std::default_delete<llvm::DomTreeNodeBase<llvm::BasicBlock>>>,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\GenericDomTree.h(761): message :             KeyInfoT=llvm::DenseMapInfo<llvm::BasicBlock *>,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\GenericDomTree.h(761): message :             BucketT=llvm::detail::DenseMapPair<llvm::BasicBlock *,std::unique_ptr<llvm::DomTreeNodeBase<llvm::BasicBlock>,std::default_delete<llvm::DomTreeNodeBase<llvm::BasicBlock>>>>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\GenericDomTree.h(761): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(685): message : 查看对正在编译的 类 模板 实例化“llvm::DenseMapBase<llvm::DenseMap<NodeT *,std::unique_ptr<llvm::DomTreeNodeBase<NodeT>,std::default_delete<_Ty>>,llvm::DenseMapInfo<KeyT>,llvm::detail::DenseMapPair<KeyT,ValueT>>,KeyT,ValueT,KeyInfoT,BucketT>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(685): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(685): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(685): message :             NodeT=llvm::BasicBlock,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(685): message :             _Ty=llvm::DomTreeNodeBase<llvm::BasicBlock>,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(685): message :             KeyT=llvm::BasicBlock *,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(685): message :             ValueT=std::unique_ptr<llvm::DomTreeNodeBase<llvm::BasicBlock>,std::default_delete<llvm::DomTreeNodeBase<llvm::BasicBlock>>>,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(685): message :             KeyInfoT=llvm::DenseMapInfo<llvm::BasicBlock *>,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(685): message :             BucketT=llvm::detail::DenseMapPair<llvm::BasicBlock *,std::unique_ptr<llvm::DomTreeNodeBase<llvm::BasicBlock>,std::default_delete<llvm::DomTreeNodeBase<llvm::BasicBlock>>>>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\DenseMap.h(685): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\GenericDomTree.h(244): message : 查看对正在编译的 类 模板 实例化“llvm::DenseMap<NodeT *,std::unique_ptr<llvm::DomTreeNodeBase<NodeT>,std::default_delete<_Ty>>,llvm::DenseMapInfo<KeyT>,llvm::detail::DenseMapPair<KeyT,ValueT>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\GenericDomTree.h(244): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\GenericDomTree.h(244): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\GenericDomTree.h(244): message :             NodeT=llvm::BasicBlock,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\GenericDomTree.h(244): message :             _Ty=llvm::DomTreeNodeBase<llvm::BasicBlock>,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\GenericDomTree.h(244): message :             KeyT=llvm::BasicBlock *,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\GenericDomTree.h(244): message :             ValueT=std::unique_ptr<llvm::DomTreeNodeBase<llvm::BasicBlock>,std::default_delete<llvm::DomTreeNodeBase<llvm::BasicBlock>>>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\GenericDomTree.h(244): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Dominators.h(36): message : 查看对正在编译的 类 模板 实例化“llvm::DominatorTreeBase<NodeT,false>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Dominators.h(36): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Dominators.h(36): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Dominators.h(36): message :             NodeT=llvm::BasicBlock
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\Dominators.h(36): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(253,1): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(233): message : 在编译 类 模板 成员函数“void llvm::SmallVectorTemplateBase<T,false>::grow(size_t)”时
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(233): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(233): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(233): message :             T=std::string
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(233): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(220): message : 查看对正在编译的函数 模板 实例化“void llvm::SmallVectorTemplateBase<T,false>::grow(size_t)”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(220): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(220): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(220): message :             T=std::string
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(220): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message : 查看对正在编译的 类 模板 实例化“llvm::SmallVectorTemplateBase<T,false>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :             T=std::string
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(315): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message : 查看对正在编译的 类 模板 实例化“llvm::SmallVectorImpl<T>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :             T=std::string
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(837): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\Error.h(967): message : 查看对正在编译的 类 模板 实例化“llvm::SmallVector<std::string,2>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244: “初始化”: 从“_Ty”转换到“_Ty2”，可能丢失数据
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:             _Ty=llvm::orc::VModuleKey
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:         and
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:             _Ty2=unsigned int
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(41): message : 查看对正在编译的函数 模板 实例化“std::pair<KeyT,ValueT>::pair<llvm::Instruction*,unsigned __int64,0>(std::pair<llvm::Instruction *,unsigned __int64> &&) noexcept”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(41): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(41): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(41): message :             KeyT=llvm::Instruction *,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(41): message :             ValueT=unsigned int
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(41): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(41): message : 查看对正在编译的函数 模板 实例化“std::pair<KeyT,ValueT>::pair<llvm::Instruction*,unsigned __int64,0>(std::pair<llvm::Instruction *,unsigned __int64> &&) noexcept”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(41): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(41): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(41): message :             KeyT=llvm::Instruction *,
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(41): message :             ValueT=unsigned int
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Transforms\InstCombine\InstCombineWorklist.h(41): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(87,1): warning C4624: “llvm::detail::move_construction_triviality_helper<T>”: 已将析构函数隐式定义为“已删除”
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(87,1): warning C4624:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(87,1): warning C4624:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(87,1): warning C4624:             T=llvm::orc::LegacyRTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager>>::getSymbolMaterializer::<lambda_ddc9b4854947c05fdcc1f2d56323ad1f>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(87,1): warning C4624:         ]
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(652): message : 查看对正在编译的 类 模板 实例化“llvm::detail::move_construction_triviality_helper<T>”的引用
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(652): message :         with
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(652): message :         [
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(652): message :             T=llvm::orc::LegacyRTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager>>::getSymbolMaterializer::<lambda_ddc9b4854947c05fdcc1f2d56323ad1f>
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(652): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(112): message : 查看对正在编译的 类 模板 实例化“std::is_move_constructible<llvm::detail::move_construction_triviality_helper<T>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(112): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(112): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(112): message :             T=llvm::orc::LegacyRTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager>>::getSymbolMaterializer::<lambda_ddc9b4854947c05fdcc1f2d56323ad1f>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(112): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\FunctionExtras.h(233): message : 查看对正在编译的 类 模板 实例化“llvm::is_trivially_move_constructible<CallableT>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\FunctionExtras.h(233): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\FunctionExtras.h(233): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\FunctionExtras.h(233): message :             CallableT=llvm::orc::LegacyRTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager>>::getSymbolMaterializer::<lambda_ddc9b4854947c05fdcc1f2d56323ad1f>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\FunctionExtras.h(233): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\Orc\RTDyldObjectLinkingLayer.h(279): message : 查看对正在编译的函数 模板 实例化“llvm::unique_function<llvm::Expected<llvm::JITTargetAddress> (void)>::unique_function<llvm::orc::LegacyRTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager>>::getSymbolMaterializer::<lambda_ddc9b4854947c05fdcc1f2d56323ad1f>>(CallableT)”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\Orc\RTDyldObjectLinkingLayer.h(279): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\Orc\RTDyldObjectLinkingLayer.h(279): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\Orc\RTDyldObjectLinkingLayer.h(279): message :             CallableT=llvm::orc::LegacyRTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager>>::getSymbolMaterializer::<lambda_ddc9b4854947c05fdcc1f2d56323ad1f>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\Orc\RTDyldObjectLinkingLayer.h(279): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\Orc\RTDyldObjectLinkingLayer.h(272): message : 查看对正在编译的函数 模板 实例化“llvm::unique_function<llvm::Expected<llvm::JITTargetAddress> (void)>::unique_function<llvm::orc::LegacyRTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager>>::getSymbolMaterializer::<lambda_ddc9b4854947c05fdcc1f2d56323ad1f>>(CallableT)”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\Orc\RTDyldObjectLinkingLayer.h(272): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\Orc\RTDyldObjectLinkingLayer.h(272): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\Orc\RTDyldObjectLinkingLayer.h(272): message :             CallableT=llvm::orc::LegacyRTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager>>::getSymbolMaterializer::<lambda_ddc9b4854947c05fdcc1f2d56323ad1f>
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\Orc\RTDyldObjectLinkingLayer.h(272): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\Orc\RTDyldObjectLinkingLayer.h(271): message : 在编译 类 模板 成员函数“llvm::JITSymbol::GetAddressFtor llvm::orc::LegacyRTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager>>::getSymbolMaterializer(std::string)”时
+E:\VisualStudio\VisualStudio2019\VisualStudio\VC\Tools\MSVC\14.23.28105\include\type_traits(454): message : 查看对正在编译的 类 模板 实例化“llvm::orc::LegacyRTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(87): message : 查看指向正在编译的变量模板“const bool is_convertible_v<llvm::orc::LegacyRTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager> > *,llvm::orc::LegacyRTDyldObjectLinkingLayerBase::LinkedObject *>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\Orc\RTDyldObjectLinkingLayer.h(402): message : 查看对正在编译的 类 模板 实例化“std::is_assignable<std::default_delete<_Ty> &,std::default_delete<llvm::orc::LegacyRTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager>>>>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\Orc\RTDyldObjectLinkingLayer.h(402): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\Orc\RTDyldObjectLinkingLayer.h(402): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\Orc\RTDyldObjectLinkingLayer.h(402): message :             _Ty=llvm::orc::LegacyRTDyldObjectLinkingLayerBase::LinkedObject
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\Orc\RTDyldObjectLinkingLayer.h(402): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\type_traits.h(87): message : 查看指向正在编译的变量模板“const bool conjunction_v<std::negation<std::is_array<llvm::orc::LegacyRTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager> > > >,std::is_assignable<std::default_delete<llvm::orc::LegacyRTDyldObjectLinkingLayerBase::LinkedObject> &,std::default_delete<llvm::orc::LegacyRTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager> > > >,std::is_convertible<llvm::orc::LegacyRTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager> > *,llvm::orc::LegacyRTDyldObjectLinkingLayerBase::LinkedObject *> >”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\Format.h(97,1): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1961): message : 参见“_snprintf”的声明
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\Format.h(109): message : 查看对正在编译的函数 模板 实例化“int llvm::format_object<uint32_t>::snprint_tuple<0>(char *,unsigned int,std::integer_sequence<unsigned __int64,0>) const”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\Format.h(110): message : 查看对正在编译的函数 模板 实例化“int llvm::format_object<uint32_t>::snprint_tuple<0>(char *,unsigned int,std::integer_sequence<unsigned __int64,0>) const”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\Format.h(109): message : 在编译 类 模板 成员函数“int llvm::format_object<uint32_t>::snprint(char *,unsigned int) const”时
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Object\SymbolicFile.h(50): message : 查看对正在编译的 类 模板 实例化“llvm::format_object<uint32_t>”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\Allocator.h(398,1): warning C4267: “参数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\Allocator.h(397): message : 在编译 类 模板 成员函数“void llvm::BumpPtrAllocatorImpl<llvm::MallocAllocator,4096,4096>::StartNewSlab(void)”时
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\Allocator.h(260): message : 查看对正在编译的函数 模板 实例化“void llvm::BumpPtrAllocatorImpl<llvm::MallocAllocator,4096,4096>::StartNewSlab(void)”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\BitmaskEnum.h(84,51): warning C4244: “return”: 从“uint64_t”转换到“std::underlying_type<E>::type”，可能丢失数据
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\BitmaskEnum.h(84,51): warning C4244:         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\BitmaskEnum.h(84,51): warning C4244:         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\BitmaskEnum.h(84,51): warning C4244:             E=llvm::JITSymbolFlags::FlagNames
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\BitmaskEnum.h(84,51): warning C4244:         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\BitmaskEnum.h(93): message : 查看对正在编译的函数 模板 实例化“std::underlying_type<E>::type llvm::BitmaskEnumDetail::Mask<E>(void)”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\BitmaskEnum.h(93): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\BitmaskEnum.h(93): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\BitmaskEnum.h(93): message :             E=llvm::JITSymbolFlags::FlagNames
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\BitmaskEnum.h(93): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\BitmaskEnum.h(112): message : 查看对正在编译的函数 模板 实例化“std::underlying_type<E>::type llvm::BitmaskEnumDetail::Underlying<E>(E)”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\BitmaskEnum.h(112): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\BitmaskEnum.h(112): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\BitmaskEnum.h(112): message :             E=llvm::JITSymbolFlags::FlagNames
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\BitmaskEnum.h(112): message :         ]
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\JITSymbol.h(105): message : 查看对正在编译的函数 模板 实例化“E llvm::BitmaskEnumDetail::operator &<llvm::JITSymbolFlags::FlagNames,void>(E,E)”的引用
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\JITSymbol.h(105): message :         with
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\JITSymbol.h(105): message :         [
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\JITSymbol.h(105): message :             E=llvm::JITSymbolFlags::FlagNames
+E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\JITSymbol.h(105): message :         ]
+E:\llvm-zip-build\ParserRep\Parser\ExpAST.cpp(277): warning C4715: “ExpAST::codegenStr”: 不是所有的控件路径都返回值
+  Parser.vcxproj -> E:\llvm-zip-build\build\x64\Debug\Parser.exe
