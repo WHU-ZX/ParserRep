@@ -19,8 +19,21 @@ Value* AssignStmtAST::codegen()
 	Value* a;
 	Value* b;
 	Value* Val;
+	Value* Val2;
 	switch (type)
 	{
+	case 0:
+		a = varNameAST->codegen();
+		switch (operatorAST->op)
+		{
+		case Op::PLUSPLUS:
+			Val = Builder.CreateLoad(a);
+			Val = Builder.CreateAdd(Val, ConstantInt::get(IntegerType::get(TheContext, 32), APInt(32, 1)));
+			Val = Builder.CreateStore(Val, a);
+			return Val;
+		default:
+			break;
+		}
 	case 1:
 		a = varNameAST->codegen();
 		b = expAST->codegen();
