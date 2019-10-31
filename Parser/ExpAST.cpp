@@ -101,14 +101,14 @@ Value* ExpAST::codegen() {
 		switch (operatorAST->op)
 		{
 		case Op::NOT:
-			Val = Builder.CreateNot(LVar, "Not tmp");
+			Val = Builder.CreateNot(LVar);
 			//Val->getType()->print(errs());  //i32
 			//cout << endl;
 			Val->print(errs());
 			std::cout << "\n";
 			return Val;
 		case Op::MINUS:
-			Val = Builder.CreateNeg(LVar, "Neg tmp");
+			Val = Builder.CreateNeg(LVar);
 			//Val->getType()->print(errs()); //i32
 			//cout << endl;
 			Val->print(errs());
@@ -119,6 +119,7 @@ Value* ExpAST::codegen() {
 			Val->print(errs());
 			std::cout << "\n";
 			return Val;*/
+			break;
 		}
 		break;
 	case 1:
@@ -230,28 +231,7 @@ Value* ExpAST::codegen() {
 		case Op::MORE:
 			if (IntegerType::classof(LVar->getType()) && IntegerType::classof(RVar->getType())) {
 				//可以加上第三个参数作为IR语句中的临时变量名
-				//Val = Builder.CreateMul(LVar, RVar);
-				//Val = Builder.CreateICm
-				//Val->print(errs());
-				cout << "\n";
-				return Val;
-			}
-			if (IntegerType::classof(LVar->getType())) {
-				LVar = Builder.CreateSIToFP(LVar, Type::getDoubleTy(TheContext));
-				LVar->print(errs());
-				cout << "\n";
-			}
-			if (IntegerType::classof(RVar->getType())) {
-				RVar = Builder.CreateSIToFP(RVar, Type::getDoubleTy(TheContext));
-				RVar->print(errs());
-				cout << "\n";
-			}
-			break;
-		case Op::MOREOREQ:
-			if (IntegerType::classof(LVar->getType()) && IntegerType::classof(RVar->getType())) {
-				//可以加上第三个参数作为IR语句中的临时变量名
-				//Val = Builder.CreateMul(LVar, RVar);
-				Val = Builder.CreateICmpSGE(LVar, RVar, "GreaterEqTmp");
+				Val = Builder.CreateICmpSGT(LVar, RVar, "GreaterTmp");
 				Val = Builder.CreateZExt(Val, IntegerType::get(TheContext, 32));
 				Val->print(errs());
 				cout << "\n";
@@ -267,14 +247,39 @@ Value* ExpAST::codegen() {
 				RVar->print(errs());
 				cout << "\n";
 			}
-			Val = Builder.CreateFCmpOGE(LVar, RVar, "GreaterEqTmp");
+			Val = Builder.CreateICmpSGT(LVar, RVar);
+			Val = Builder.CreateZExt(Val, IntegerType::get(TheContext, 32));
+			Val->print(errs());
+			cout << "\n";
+			return Val;
+		case Op::MOREOREQ:
+			if (IntegerType::classof(LVar->getType()) && IntegerType::classof(RVar->getType())) {
+				//可以加上第三个参数作为IR语句中的临时变量名
+				//Val = Builder.CreateMul(LVar, RVar);
+				Val = Builder.CreateICmpSGE(LVar, RVar);
+				Val = Builder.CreateZExt(Val, IntegerType::get(TheContext, 32));
+				Val->print(errs());
+				cout << "\n";
+				return Val;
+			}
+			if (IntegerType::classof(LVar->getType())) {
+				LVar = Builder.CreateSIToFP(LVar, Type::getDoubleTy(TheContext));
+				LVar->print(errs());
+				cout << "\n";
+			}
+			if (IntegerType::classof(RVar->getType())) {
+				RVar = Builder.CreateSIToFP(RVar, Type::getDoubleTy(TheContext));
+				RVar->print(errs());
+				cout << "\n";
+			}
+			Val = Builder.CreateFCmpOGE(LVar, RVar);
 			Val = Builder.CreateZExt(Val, IntegerType::get(TheContext, 32));
 			return Val;
 		case Op::LESS:
 			if (IntegerType::classof(LVar->getType()) && IntegerType::classof(RVar->getType())) {
 				//可以加上第三个参数作为IR语句中的临时变量名
 				//Val = Builder.CreateMul(LVar, RVar);
-				Val = Builder.CreateICmpSLT(LVar, RVar, "LessThanTmp");
+				Val = Builder.CreateICmpSLT(LVar, RVar);
 				Val = Builder.CreateZExt(Val, IntegerType::get(TheContext, 32));
 				Val->print(errs());
 				cout << "\n";
@@ -290,14 +295,14 @@ Value* ExpAST::codegen() {
 				RVar->print(errs());
 				cout << "\n";
 			}
-			Val = Builder.CreateFCmpOLT(LVar, RVar, "LessThanTmp");
+			Val = Builder.CreateFCmpOLT(LVar, RVar);
 			Val = Builder.CreateZExt(Val, IntegerType::get(TheContext, 32));
 			return Val;
 		case Op::LESSOREQ:
 			if (IntegerType::classof(LVar->getType()) && IntegerType::classof(RVar->getType())) {
 				//可以加上第三个参数作为IR语句中的临时变量名
 				//Val = Builder.CreateMul(LVar, RVar);
-				Val = Builder.CreateICmpSLE(LVar, RVar, "LessEqTmp");
+				Val = Builder.CreateICmpSLE(LVar, RVar);
 				Val = Builder.CreateZExt(Val, IntegerType::get(TheContext, 32));
 				Val->print(errs());
 				cout << "\n";
@@ -313,14 +318,14 @@ Value* ExpAST::codegen() {
 				RVar->print(errs());
 				cout << "\n";
 			}
-			Val = Builder.CreateFCmpOLE(LVar, RVar, "LessEqTmp");
+			Val = Builder.CreateFCmpOLE(LVar, RVar);
 			Val = Builder.CreateZExt(Val, IntegerType::get(TheContext, 32));
 			return Val;
 		case Op::EQ:
 			if (IntegerType::classof(LVar->getType()) && IntegerType::classof(RVar->getType())) {
 				//可以加上第三个参数作为IR语句中的临时变量名
 				//Val = Builder.CreateMul(LVar, RVar);
-				Val = Builder.CreateICmpEQ(LVar, RVar, "EqTmp");
+				Val = Builder.CreateICmpEQ(LVar, RVar);
 				Val = Builder.CreateZExt(Val, IntegerType::get(TheContext, 32));
 				Val->print(errs());
 				cout << "\n";
@@ -336,14 +341,14 @@ Value* ExpAST::codegen() {
 				RVar->print(errs());
 				cout << "\n";
 			}
-			Val = Builder.CreateFCmpOEQ(LVar, RVar, "EqTmp");
+			Val = Builder.CreateFCmpOEQ(LVar, RVar);
 			Val = Builder.CreateZExt(Val, IntegerType::get(TheContext, 32));
 			return Val;
 		case Op::NEQ:
 			if (IntegerType::classof(LVar->getType()) && IntegerType::classof(RVar->getType())) {
 				//可以加上第三个参数作为IR语句中的临时变量名
 				//Val = Builder.CreateMul(LVar, RVar);
-				Val = Builder.CreateICmpNE(LVar, RVar, "NeqTmp");
+				Val = Builder.CreateICmpNE(LVar, RVar);
 				Val = Builder.CreateZExt(Val, IntegerType::get(TheContext, 32));
 				Val->print(errs());
 				cout << "\n";
@@ -359,18 +364,18 @@ Value* ExpAST::codegen() {
 				RVar->print(errs());
 				cout << "\n";
 			}
-			Val = Builder.CreateFCmpONE(LVar, RVar, "NeqTmp");
+			Val = Builder.CreateFCmpONE(LVar, RVar);
 			Val = Builder.CreateZExt(Val, IntegerType::get(TheContext, 32));
 			return Val;
 		case Op::AND://CreateAnd难道是按位与吗？
-			Val = Builder.CreateAnd(LVar, RVar, "And tmp");
+			Val = Builder.CreateAnd(LVar, RVar);
 			//cout << endl;
 			//Val->getType()->print(errs());//    Val->getType() == i32 (1位无符号整数)
 			Val->print(errs());
 			cout << "\n";
 			return Val;
 		case Op::OR:
-			Val = Builder.CreateOr(LVar, RVar, "Or tmp");
+			Val = Builder.CreateOr(LVar, RVar);
 			Val->print(errs());
 			cout << "\n";
 			return Val;
