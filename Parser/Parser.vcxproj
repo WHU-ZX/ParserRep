@@ -89,7 +89,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>false</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>E:\LLVM\llvm build\include;E:\LLVM\llvm-project-master\llvm\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\llvm-zip-build\build\include;E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -238,140 +238,140 @@
     <ClInclude Include="WhileStmtAST.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\lib\Analysis\LLVMAnalysis.vcxproj">
-      <Project>{3147ab04-c4a1-31c6-9fbd-4057dd6dc37a}</Project>
+    <ProjectReference Include="..\..\build\lib\Analysis\LLVMAnalysis.vcxproj">
+      <Project>{f9253ac1-3a22-3683-8519-318fb764bc36}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\AsmParser\LLVMAsmParser.vcxproj">
-      <Project>{b028c3fa-4383-3cb8-8dc7-29e47d9e7dc0}</Project>
+    <ProjectReference Include="..\..\build\lib\AsmParser\LLVMAsmParser.vcxproj">
+      <Project>{d6291573-25ac-34e3-9b2b-124c9fda7a10}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\BinaryFormat\LLVMBinaryFormat.vcxproj">
-      <Project>{c5661f0f-78cf-3ffd-86ef-4a0f26deb626}</Project>
+    <ProjectReference Include="..\..\build\lib\BinaryFormat\LLVMBinaryFormat.vcxproj">
+      <Project>{6fba2f6e-5e84-3cf1-80dd-786e6d59b057}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Bitcode\Reader\LLVMBitReader.vcxproj">
-      <Project>{e81dd418-7156-3d16-99fa-5cd9bc944caf}</Project>
+    <ProjectReference Include="..\..\build\lib\Bitcode\Reader\LLVMBitReader.vcxproj">
+      <Project>{c12e2382-31b8-33d6-9410-86c54a82c580}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Bitcode\Writer\LLVMBitWriter.vcxproj">
-      <Project>{6c177f01-8e33-3bbd-abb7-25c0fdaf0f0b}</Project>
+    <ProjectReference Include="..\..\build\lib\Bitcode\Writer\LLVMBitWriter.vcxproj">
+      <Project>{9373be0f-634c-3ada-be76-9273b1afa1ee}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Bitstream\Reader\LLVMBitstreamReader.vcxproj">
-      <Project>{cee0f5e7-435a-3eba-8985-c905746c7e72}</Project>
+    <ProjectReference Include="..\..\build\lib\Bitstream\Reader\LLVMBitstreamReader.vcxproj">
+      <Project>{c32dfda3-4d5a-31ea-8aa4-81008d60cc16}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\CodeGen\AsmPrinter\LLVMAsmPrinter.vcxproj">
-      <Project>{a2c4cfc2-ee71-320c-8a47-ee24a5689210}</Project>
+    <ProjectReference Include="..\..\build\lib\CodeGen\AsmPrinter\LLVMAsmPrinter.vcxproj">
+      <Project>{14a14ee4-860d-3bb1-82ea-9180bbb291a6}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\CodeGen\GlobalISel\LLVMGlobalISel.vcxproj">
-      <Project>{2581174e-06e9-32b3-bab4-6eb5824ece15}</Project>
+    <ProjectReference Include="..\..\build\lib\CodeGen\GlobalISel\LLVMGlobalISel.vcxproj">
+      <Project>{d566fbb6-a1c2-36a1-ae02-7c6e213ed3b9}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\CodeGen\SelectionDAG\LLVMSelectionDAG.vcxproj">
-      <Project>{6d556769-a52d-3e0e-8abb-05d8eeb91ba7}</Project>
+    <ProjectReference Include="..\..\build\lib\CodeGen\LLVMCodeGen.vcxproj">
+      <Project>{e79ca38a-e6b9-38f3-a020-57a781a13ce3}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\DebugInfo\CodeView\LLVMDebugInfoCodeView.vcxproj">
-      <Project>{bb31ea53-c42a-3ba3-97b4-9d4f45c2a245}</Project>
+    <ProjectReference Include="..\..\build\lib\CodeGen\SelectionDAG\LLVMSelectionDAG.vcxproj">
+      <Project>{e2a1d558-4b6d-384b-a7ce-fcc8999a7820}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\DebugInfo\DWARF\LLVMDebugInfoDWARF.vcxproj">
-      <Project>{1d98df46-760e-3cd7-ad2d-11bcfb4869bd}</Project>
+    <ProjectReference Include="..\..\build\lib\DebugInfo\CodeView\LLVMDebugInfoCodeView.vcxproj">
+      <Project>{a25b4bf5-0072-37bc-8e97-6762db7d1a65}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\DebugInfo\GSYM\LLVMDebugInfoGSYM.vcxproj">
-      <Project>{6c40b864-6253-3283-8ab8-9650324efb51}</Project>
+    <ProjectReference Include="..\..\build\lib\DebugInfo\DWARF\LLVMDebugInfoDWARF.vcxproj">
+      <Project>{dfa6ff9c-1e05-3677-87c2-d8b07523cdc5}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Demangle\LLVMDemangle.vcxproj">
-      <Project>{4b3c6e24-7999-324d-a9b8-ff18155c4d0f}</Project>
+    <ProjectReference Include="..\..\build\lib\DebugInfo\MSF\LLVMDebugInfoMSF.vcxproj">
+      <Project>{7035d7a3-8a8e-37ea-981b-08e2f030b5dc}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\ExecutionEngine\JITLink\LLVMJITLink.vcxproj">
-      <Project>{000b68d7-83fa-32c2-97e1-4c3faa399667}</Project>
+    <ProjectReference Include="..\..\build\lib\Demangle\LLVMDemangle.vcxproj">
+      <Project>{f31d3185-4456-3bd6-9ded-01c447008cbd}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\ExecutionEngine\LLVMExecutionEngine.vcxproj">
-      <Project>{98f80ba0-b68a-3bda-bf2e-0927838f2abb}</Project>
+    <ProjectReference Include="..\..\build\lib\ExecutionEngine\JITLink\LLVMJITLink.vcxproj">
+      <Project>{6bff4d8c-9cc1-3e62-b968-485d60bb12b4}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\ExecutionEngine\Orc\LLVMOrcJIT.vcxproj">
-      <Project>{0a40cfe0-708d-361e-89e6-df099eed8575}</Project>
+    <ProjectReference Include="..\..\build\lib\ExecutionEngine\LLVMExecutionEngine.vcxproj">
+      <Project>{d5dea623-92db-360f-8547-a481d54564df}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\ExecutionEngine\RuntimeDyld\LLVMRuntimeDyld.vcxproj">
-      <Project>{0196fc87-83a9-3524-a64a-1ef3c8a674e1}</Project>
+    <ProjectReference Include="..\..\build\lib\ExecutionEngine\Orc\LLVMOrcJIT.vcxproj">
+      <Project>{918589ca-105d-30b1-b989-338383820693}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\IRReader\LLVMIRReader.vcxproj">
-      <Project>{3922371b-cd29-3c41-bb4a-c175e4e373fd}</Project>
+    <ProjectReference Include="..\..\build\lib\ExecutionEngine\RuntimeDyld\LLVMRuntimeDyld.vcxproj">
+      <Project>{77bddc6f-6983-3c31-b4a3-a5b529230cfe}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\IR\LLVMCore.vcxproj">
-      <Project>{a2c61a47-fc4d-3cb7-bc02-bf08d8ceb096}</Project>
+    <ProjectReference Include="..\..\build\lib\IRReader\LLVMIRReader.vcxproj">
+      <Project>{7af4c671-302f-3dd2-b7f6-eb113daf4cbf}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Linker\LLVMLinker.vcxproj">
-      <Project>{a1658b83-7e4a-32f5-8d39-fcc64cec8a85}</Project>
+    <ProjectReference Include="..\..\build\lib\IR\LLVMCore.vcxproj">
+      <Project>{df33b03a-85cc-3601-ab1e-9d9b47fa44c5}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\MC\LLVMMC.vcxproj">
-      <Project>{1cb82288-f879-3b2e-8097-2a5704fcc5dd}</Project>
+    <ProjectReference Include="..\..\build\lib\Linker\LLVMLinker.vcxproj">
+      <Project>{f8a43e19-0ed5-3858-b807-7f68af54d94c}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\MC\MCDisassembler\LLVMMCDisassembler.vcxproj">
-      <Project>{eee6c8a5-a438-3a6e-a7ff-cd7236edce39}</Project>
+    <ProjectReference Include="..\..\build\lib\MC\LLVMMC.vcxproj">
+      <Project>{5ccc0391-5526-370d-86eb-2401391ee859}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\MC\MCParser\LLVMMCParser.vcxproj">
-      <Project>{0c5c9336-411a-3f04-bb53-29463bf59c7f}</Project>
+    <ProjectReference Include="..\..\build\lib\MC\MCDisassembler\LLVMMCDisassembler.vcxproj">
+      <Project>{b8731037-99f4-3caa-8460-76654a1a36e4}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Object\LLVMObject.vcxproj">
-      <Project>{0b9b5612-8852-352a-918d-bcff984f1965}</Project>
+    <ProjectReference Include="..\..\build\lib\MC\MCParser\LLVMMCParser.vcxproj">
+      <Project>{d25fa986-537d-3d96-a50b-116ca285d39e}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Passes\LLVMPasses.vcxproj">
-      <Project>{31d96b2c-e62e-3f55-905b-da64f4b76481}</Project>
+    <ProjectReference Include="..\..\build\lib\Object\LLVMObject.vcxproj">
+      <Project>{194b59be-022e-3a42-b5ca-c6254b8201cc}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\ProfileData\LLVMProfileData.vcxproj">
-      <Project>{5e5b6d17-40af-3328-ad55-7cd35c05913e}</Project>
+    <ProjectReference Include="..\..\build\lib\Passes\LLVMPasses.vcxproj">
+      <Project>{051a08d2-ce48-385e-beb0-f1b309871d3a}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Remarks\LLVMRemarks.vcxproj">
-      <Project>{9a662085-298c-31c5-b91f-5f22fb3aac98}</Project>
+    <ProjectReference Include="..\..\build\lib\ProfileData\LLVMProfileData.vcxproj">
+      <Project>{a8003ed9-e8a9-352f-84ca-4488b02886bd}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Support\LLVMSupport.vcxproj">
-      <Project>{f04ad8a7-78dc-376e-8539-00b029dd8ef2}</Project>
+    <ProjectReference Include="..\..\build\lib\Remarks\LLVMRemarks.vcxproj">
+      <Project>{af7d5533-1620-3cda-9726-00d695a5bd3c}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Target\BPF\LLVMBPFCodeGen.vcxproj">
-      <Project>{b2c80f96-b7c7-35f2-ac57-3a22e1dcc354}</Project>
+    <ProjectReference Include="..\..\build\lib\Support\LLVMSupport.vcxproj">
+      <Project>{abe2409f-09a6-330c-bdf0-1747aa4d43f2}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Target\LLVMTarget.vcxproj">
-      <Project>{8e31f732-77fd-3de5-915e-6ff799e9d5d5}</Project>
+    <ProjectReference Include="..\..\build\lib\Target\LLVMTarget.vcxproj">
+      <Project>{1ea17618-d88c-3fba-81e7-2f36282dd616}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Target\X86\AsmParser\LLVMX86AsmParser.vcxproj">
-      <Project>{d52aa008-5e35-37f5-9f5d-4dc85d09bb23}</Project>
+    <ProjectReference Include="..\..\build\lib\Target\X86\AsmParser\LLVMX86AsmParser.vcxproj">
+      <Project>{07c21427-e321-3716-b273-3ace6727164e}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Target\X86\Disassembler\LLVMX86Disassembler.vcxproj">
-      <Project>{71fe3832-65a2-3a15-867e-c23d4357c8cd}</Project>
+    <ProjectReference Include="..\..\build\lib\Target\X86\Disassembler\LLVMX86Disassembler.vcxproj">
+      <Project>{5975c71f-7e7e-3fe3-9823-eb5841b7552d}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Target\X86\LLVMX86CodeGen.vcxproj">
-      <Project>{0c23733d-a9c5-3109-b170-23d61be8ce66}</Project>
+    <ProjectReference Include="..\..\build\lib\Target\X86\LLVMX86CodeGen.vcxproj">
+      <Project>{7302b79b-f73b-3871-9a7f-688899da9574}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Target\X86\MCTargetDesc\LLVMX86Desc.vcxproj">
-      <Project>{465f6fc4-2a0d-392f-b890-2957113f63e4}</Project>
+    <ProjectReference Include="..\..\build\lib\Target\X86\MCTargetDesc\LLVMX86Desc.vcxproj">
+      <Project>{7a4f6069-f926-3772-a241-a09da09bb26d}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Target\X86\TargetInfo\LLVMX86Info.vcxproj">
-      <Project>{1308ad67-d779-33ee-b490-efc18c0c4b3e}</Project>
+    <ProjectReference Include="..\..\build\lib\Target\X86\TargetInfo\LLVMX86Info.vcxproj">
+      <Project>{a90df8e1-042a-376e-a972-e71e1bf35a84}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Target\X86\Utils\LLVMX86Utils.vcxproj">
-      <Project>{238c5289-4247-30c2-b451-9a8d4a4b2677}</Project>
+    <ProjectReference Include="..\..\build\lib\Target\X86\Utils\LLVMX86Utils.vcxproj">
+      <Project>{f917102a-542c-331c-a39b-9aeb73ec628f}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\TextAPI\LLVMTextAPI.vcxproj">
-      <Project>{4ff1b20b-c868-377d-b961-5e6f5abafe11}</Project>
+    <ProjectReference Include="..\..\build\lib\TextAPI\LLVMTextAPI.vcxproj">
+      <Project>{d7426ba1-e882-3827-ae27-286a4b38badd}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Transforms\AggressiveInstCombine\LLVMAggressiveInstCombine.vcxproj">
-      <Project>{ab5d116e-beed-3f69-b032-7db9fbfca043}</Project>
+    <ProjectReference Include="..\..\build\lib\Transforms\AggressiveInstCombine\LLVMAggressiveInstCombine.vcxproj">
+      <Project>{d88a65ed-f087-3825-962b-bdceb5ec0590}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Transforms\InstCombine\LLVMInstCombine.vcxproj">
-      <Project>{7aa902b7-297c-35f8-9c8c-051ec65f2961}</Project>
+    <ProjectReference Include="..\..\build\lib\Transforms\InstCombine\LLVMInstCombine.vcxproj">
+      <Project>{50f59aab-1620-3a3c-82fc-cb66facf35ce}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Transforms\Instrumentation\LLVMInstrumentation.vcxproj">
-      <Project>{6a1ad71d-cc87-36d4-94d4-471495758baa}</Project>
+    <ProjectReference Include="..\..\build\lib\Transforms\Instrumentation\LLVMInstrumentation.vcxproj">
+      <Project>{9a2cd08c-2415-3cb5-9fce-628d8a07f2f3}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Transforms\IPO\LLVMipo.vcxproj">
-      <Project>{daf00e63-e4da-3fe7-bd99-9dc4743589d6}</Project>
+    <ProjectReference Include="..\..\build\lib\Transforms\IPO\LLVMipo.vcxproj">
+      <Project>{be12b375-94bd-3190-818b-bd9527891a97}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Transforms\Scalar\LLVMScalarOpts.vcxproj">
-      <Project>{6b578373-3f54-349a-8458-4e902fd0b1bc}</Project>
+    <ProjectReference Include="..\..\build\lib\Transforms\Scalar\LLVMScalarOpts.vcxproj">
+      <Project>{43be76b7-69f7-3460-ba1b-b996b11ee390}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Transforms\Utils\LLVMTransformUtils.vcxproj">
-      <Project>{2212ed61-d21f-31fa-9b4a-8e521db38ba7}</Project>
+    <ProjectReference Include="..\..\build\lib\Transforms\Utils\LLVMTransformUtils.vcxproj">
+      <Project>{9ddf1533-3233-367b-9f0a-cf1a3f29767f}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\Transforms\Vectorize\LLVMVectorize.vcxproj">
-      <Project>{1d1c2002-345b-361e-9483-40e59966ac29}</Project>
+    <ProjectReference Include="..\..\build\lib\Transforms\Vectorize\LLVMVectorize.vcxproj">
+      <Project>{b14cb953-631d-34de-90ec-480ef34ab316}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\ZERO_CHECK.vcxproj">
-      <Project>{acf585fb-bcad-3fae-ae56-0f85c3a3b0f6}</Project>
+    <ProjectReference Include="..\..\build\ZERO_CHECK.vcxproj">
+      <Project>{eca4ca4f-39c3-3198-a1ad-9a77c06c0539}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

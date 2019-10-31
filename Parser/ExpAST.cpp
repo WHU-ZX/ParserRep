@@ -231,10 +231,8 @@ Value* ExpAST::codegen() {
 			if (IntegerType::classof(LVar->getType()) && IntegerType::classof(RVar->getType())) {
 				//可以加上第三个参数作为IR语句中的临时变量名
 				//Val = Builder.CreateMul(LVar, RVar);
-				Val = Builder.CreateICmpSGT(LVar, RVar, "GreaterThanTmp");
-				Val = Builder.CreateZExt(Val, IntegerType::get(TheContext, 32));
-				Val->print(errs());
-				//Val->getType()->print(errs());//    Val->getType() == i1 (1位无符号整数)
+				//Val = Builder.CreateICm
+				//Val->print(errs());
 				cout << "\n";
 				return Val;
 			}
@@ -248,9 +246,7 @@ Value* ExpAST::codegen() {
 				RVar->print(errs());
 				cout << "\n";
 			}
-			Val = Builder.CreateFCmpOGT(LVar, RVar, "GreaterThanTmp");
-			Val = Builder.CreateZExt(Val, IntegerType::get(TheContext, 32));
-			return Val;
+			break;
 		case Op::MOREOREQ:
 			if (IntegerType::classof(LVar->getType()) && IntegerType::classof(RVar->getType())) {
 				//可以加上第三个参数作为IR语句中的临时变量名
