@@ -1,4 +1,4 @@
-﻿  ExpAST.cpp
+﻿  ProgramAST.cpp
 E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\Support\MathExtras.h(379,31): warning C4146: 一元负运算符应用于无符号类型，结果仍为无符号类型
 E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(44,7): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
 E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\SmallVector.h(68,1): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
@@ -461,7 +461,8 @@ E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Option
 E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ADT\Optional.h(216): message :         ]
 E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\ValueMap.h(94): message : 查看对正在编译的 类 模板 实例化“llvm::Optional<llvm::ValueMap<KeyT,ValueT,Config>::MDMapT>”的引用
 E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\ValueMap.h(236): message : 查看对正在编译的 类 模板 实例化“llvm::ValueMap<KeyT,ValueT,Config>”的引用
-E:\llvm-zip-build\ParserRep\Parser\ExpAST.cpp(90,14): warning C4101: “LVarV”: 未引用的局部变量
+E:\llvm-zip-build\ParserRep\Parser\ProgramAST.cpp(53,45): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+E:\llvm-zip-build\ParserRep\Parser\ProgramAST.cpp(59,49): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
 E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\CallSite.h(215,14): warning C4244: “return”: 从“__int64”转换到“unsigned int”，可能丢失数据
 E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\CallSite.h(212): message : 在编译 类 模板 成员函数“unsigned int llvm::CallSiteBase<llvm::Function,llvm::BasicBlock,llvm::Value,llvm::User,llvm::Use,llvm::Instruction,llvm::CallInst,llvm::InvokeInst,llvm::CallBrInst,llvm::User::op_iterator>::getArgumentNo(const llvm::Use *) const”时
 E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\IR\CallSite.h(807): message : 查看对正在编译的函数 模板 实例化“unsigned int llvm::CallSiteBase<llvm::Function,llvm::BasicBlock,llvm::Value,llvm::User,llvm::Use,llvm::Instruction,llvm::CallInst,llvm::InvokeInst,llvm::CallBrInst,llvm::User::op_iterator>::getArgumentNo(const llvm::Use *) const”的引用
@@ -743,5 +744,4 @@ E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionE
 E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\JITSymbol.h(105): message :         [
 E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\JITSymbol.h(105): message :             E=llvm::JITSymbolFlags::FlagNames
 E:\llvm-zip\llvm-project-master\llvm-project-master\llvm\include\llvm\ExecutionEngine\JITSymbol.h(105): message :         ]
-E:\llvm-zip-build\ParserRep\Parser\ExpAST.cpp(277): warning C4715: “ExpAST::codegenStr”: 不是所有的控件路径都返回值
   Parser.vcxproj -> E:\llvm-zip-build\build\x64\Debug\Parser.exe

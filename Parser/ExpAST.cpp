@@ -233,6 +233,9 @@ Value* ExpAST::codegen() {
 				//Val = Builder.CreateMul(LVar, RVar);
 				//Val = Builder.CreateICm
 				//Val->print(errs());
+				Val = Builder.CreateICmpSGT(LVar, RVar);
+				Val = Builder.CreateZExt(Val, IntegerType::get(TheContext, 32));
+				Val->print(errs());
 				cout << "\n";
 				return Val;
 			}
@@ -246,6 +249,9 @@ Value* ExpAST::codegen() {
 				RVar->print(errs());
 				cout << "\n";
 			}
+			Val = Builder.CreateFCmpUGT(LVar, RVar);
+			Val = Builder.CreateZExt(Val, IntegerType::get(TheContext, 32));
+			return Val;
 			break;
 		case Op::MOREOREQ:
 			if (IntegerType::classof(LVar->getType()) && IntegerType::classof(RVar->getType())) {
