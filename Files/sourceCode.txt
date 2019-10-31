@@ -18,7 +18,7 @@ int func1(int p){
 	real i = g3 * 3;
 	int e4 = 6 / 2;
 	real g4 = 3.2 / 1.1;
-	a = 4;
+	a = -4;
 	c = 5.5;
 	while (a){
 		a = 5;
@@ -31,7 +31,7 @@ int func1(int p){
 int fun2(real j1, int j2){
 	int k = 10;
 	real t = 5.0;
-	if (3>2) {
+	if (!(!k && 3)) {
 		k = 4;
 	}
 	else {

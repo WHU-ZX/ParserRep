@@ -115,10 +115,10 @@ Value* ExpAST::codegen() {
 			std::cout << "\n";
 			return Val;
 		case Op::STAR:
-			Val = Builder.CreateNot(LVar, "Not tmp");
+			/*Val = Builder.CreateNot(LVar, "Not tmp");
 			Val->print(errs());
 			std::cout << "\n";
-			return Val;
+			return Val;*/
 		}
 		break;
 	case 1:
