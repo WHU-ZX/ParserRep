@@ -391,7 +391,6 @@ Value* ExpAST::codegen() {
 		Val->print(errs());
 		cout << "\n";
 		return Val;
-		break;
 	default:
 		break;
 	}
